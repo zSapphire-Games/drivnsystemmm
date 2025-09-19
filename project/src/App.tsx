@@ -60,8 +60,7 @@ function App() {
               className="w-12 h-12 object-contain"
             />
             <div>
-              <h1 className="text-2xl font-bold text-white">DRIVN</h1>
-              <p className="text-sm text-blue-300">Systemized</p>
+              <h1 className="text-2xl font-bold text-white">DRIVN Systemized</h1>
             </div>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
