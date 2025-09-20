@@ -110,7 +110,7 @@ function App() {
                   <div className="w-full h-full relative">
                     <iframe
                       className="w-full h-full"
-                      src="https://www.youtube.com/watch?v=K7uYlaAjlQ4?autoplay=1"
+                      src="https://www.youtube.com/embed/K7uYlaAjlQ4?autoplay=1"
                       title="YouTube video"
                       frameBorder="0"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
