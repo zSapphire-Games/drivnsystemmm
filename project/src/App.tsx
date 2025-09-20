@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Play, CheckCircle, Star, Users, Target, TrendingUp, Clock, Shield } from 'lucide-react';
+import React, { useState } from "react";
+import { Play, CheckCircle, Star, Users, Target, TrendingUp, Clock, Shield } from "lucide-react";
 
 function App() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -96,7 +96,7 @@ function App() {
                       onClick={() => setIsVideoPlaying(true)}
                       className="group relative inline-flex items-center justify-center w-24 h-24 bg-blue-600 hover:bg-blue-700 rounded-full transition-all duration-300 transform hover:scale-110 shadow-lg"
                     >
-                      <Play className="w-8 h-8 text-white ml-1" fill="white" />
+                      <Play className="w-8 h-8 text-white ml-1" strokeWidth={2} />
                       <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-25"></div>
                     </button>
                     <p className="text-white text-lg mt-6">
@@ -107,35 +107,44 @@ function App() {
                     </p>
                   </div>
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center text-white">
-                    <div className="text-center">
-                      <div className="animate-spin rounded-full h-12 w-12 border-4 border-blue-400 border-t-transparent mx-auto mb-4"></div>
-                      <p>Your video would load here</p>
-                      <p className="text-sm text-gray-400 mt-2">Replace this placeholder with your actual video, dm me if you don't know how ;)</p>
-                      <button 
-                        onClick={() => setIsVideoPlaying(false)}
-                        className="mt-4 text-blue-400 hover:text-blue-300 underline"
-                      >
-                        ← Back to thumbnail
-                      </button>
-                    </div>
+                  <div className="w-full h-full relative">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/watch?v=K7uYlaAjlQ4?autoplay=1"
+                      title="YouTube video"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                    <button
+                      onClick={() => setIsVideoPlaying(false)}
+                      className="absolute top-4 left-4 bg-black/50 text-white px-3 py-1 rounded hover:bg-black/70"
+                    >
+                      ← Back
+                    </button>
                   </div>
                 )}
               </div>
             </div>
-            
+
             {/* Video Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="text-3xl font-bold text-blue-400 mb-2">10+</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2 flex items-center justify-center gap-2">
+                  <Users className="w-6 h-6" /> 10+
+                </div>
                 <div className="text-white">Agencies Scaled</div>
               </div>
               <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="text-3xl font-bold text-green-400 mb-2">$10K+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2 flex items-center justify-center gap-2">
+                  <TrendingUp className="w-6 h-6" /> $10K+
+                </div>
                 <div className="text-white">Revenue Generated</div>
               </div>
               <div className="text-center bg-black/30 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <div className="text-3xl font-bold text-purple-400 mb-2">100%</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2 flex items-center justify-center gap-2">
+                  <CheckCircle className="w-6 h-6" /> 100%
+                </div>
                 <div className="text-white">Success Rate</div>
               </div>
             </div>
