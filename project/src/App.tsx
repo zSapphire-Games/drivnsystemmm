@@ -103,7 +103,7 @@ function App() {
                       How We Systemized Growth for 10+ Agencies
                     </p>
                     <p className="text-gray-400 text-sm mt-2">
-                      ⏱ 8 minutes • Game-changing insights
+                      ⏱ 11 minutes • Game-changing insights
                     </p>
                   </div>
                 ) : (
@@ -154,9 +154,6 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
               Get Your Growth System Now
-            </button>
-            <button className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300">
-              Schedule Free Strategy Call
             </button>
           </div>
         </div>
